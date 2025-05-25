@@ -113,7 +113,7 @@ class LLMService:
             }
         }
         
-        response = requests.post(url, json=payload)
+        response = requests.post(url, json=payload, timeout=30)
         
         if response.status_code == 200:
             result = response.json()
@@ -145,7 +145,7 @@ class LLMService:
             "max_tokens": 1000
         }
         
-        response = requests.post(url, headers=headers, json=payload)
+        response = requests.post(url, headers=headers, json=payload, timeout=30)
         
         if response.status_code == 200:
             result = response.json()

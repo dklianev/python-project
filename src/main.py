@@ -14,6 +14,7 @@ from src.components.chat_widget import ChatWidget
 from src.components.pomodoro_widget import PomodoroWidget
 from src.services.llm_service import LLMService
 from src.utils.time_utils import get_greeting
+from src.database.db_manager import DatabaseManager
 
 # Load environment variables
 load_dotenv()

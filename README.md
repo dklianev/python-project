@@ -48,6 +48,16 @@ LLM_MODEL=llama3
 ## Стартиране на приложението
 
 ```
+python run.py
+```
+
+Или директно:
+```
+python src/main.py
+```
+
+Или директно:
+```
 python src/main.py
 ```
 

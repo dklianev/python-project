@@ -72,7 +72,7 @@ class WeatherWidget(ctk.CTkFrame):
         
         try:
             url = f"http://api.openweathermap.org/data/2.5/weather?q={self.location}&appid={self.api_key}&units=metric&lang=bg"
-            response = requests.get(url)
+            response = requests.get(url, timeout=10)
             data = response.json()
             
             if response.status_code == 200:
