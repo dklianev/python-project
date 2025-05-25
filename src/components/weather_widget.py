@@ -58,7 +58,7 @@ class WeatherWidget(ctk.CTkFrame):
         self.wind_label.pack(side="left", padx=10)
         
         # Fetch weather if API key is available
-        if self.api_key:
+        if self.api_key and self.api_key != "your_openweather_api_key_here":
             self.refresh_weather()
         else:
             self.show_api_missing()
@@ -66,7 +66,7 @@ class WeatherWidget(ctk.CTkFrame):
     def refresh_weather(self):
         self.location = self.location_entry.get()
         
-        if not self.api_key:
+        if not self.api_key or self.api_key == "your_openweather_api_key_here":
             self.show_api_missing()
             return
         
